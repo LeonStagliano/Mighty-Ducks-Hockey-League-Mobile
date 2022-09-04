@@ -42,22 +42,25 @@
         </template>
 
         <div class="main-title-container">
-            <h2 class="main-title">ABOUT US</h2>
+            <h2 class="main-title">MIGHTY DUCKS HOCKEY LEAGUE</h2>
         </div>
+
+        <img id="logo-about" src="./assets/Logo-MDHL.png" />
+
         <section class="accordion">
             <div @click="expandAccordion(`mission`)">
                 <div class="accordion-btn-container">
                     <h4>MISSION</h4>
                     <template v-if="missionExpanded === false">
-                        <div class="accordion-icon">
-                            <span class="icon-line1"></span>
-                            <span class="icon-line2"></span>
+                        <div class="icon">
+                            <span class="arrow-line1"></span>
+                            <span class="arrow-line2"></span>
                         </div>
                     </template>
                     <template v-if="missionExpanded === true">
-                        <div class="accordion-icon">
-                            <span class="icon-line1b"></span>
-                            <span class="icon-line2b"></span>
+                        <div class="icon">
+                            <span class="arrow-line1b"></span>
+                            <span class="arrow-line2b"></span>
                         </div>
                     </template>
                 </div>
@@ -73,15 +76,15 @@
                 <div class="accordion-btn-container">
                     <h4>VISION</h4>
                     <template v-if="visionExpanded === false">
-                        <div class="accordion-icon">
-                            <span class="icon-line1"></span>
-                            <span class="icon-line2"></span>
+                        <div class="icon">
+                            <span class="arrow-line1"></span>
+                            <span class="arrow-line2"></span>
                         </div>
                     </template>
                     <template v-if="visionExpanded === true">
-                        <div class="accordion-icon">
-                            <span class="icon-line1b"></span>
-                            <span class="icon-line2b"></span>
+                        <div class="icon">
+                            <span class="arrow-line1b"></span>
+                            <span class="arrow-line2b"></span>
                         </div>
                     </template>
                 </div>
@@ -95,15 +98,15 @@
                 <div class="accordion-btn-container">
                     <h4>GENERAL INFORMATION</h4>
                     <template v-if="generalInfoExpanded === false">
-                        <div class="accordion-icon">
-                            <span class="icon-line1"></span>
-                            <span class="icon-line2"></span>
+                        <div class="icon">
+                            <span class="arrow-line1"></span>
+                            <span class="arrow-line2"></span>
                         </div>
                     </template>
                     <template v-if="generalInfoExpanded === true">
-                        <div class="accordion-icon">
-                            <span class="icon-line1b"></span>
-                            <span class="icon-line2b"></span>
+                        <div class="icon">
+                            <span class="arrow-line1b"></span>
+                            <span class="arrow-line2b"></span>
                         </div>
                     </template>
                 </div>
@@ -119,7 +122,7 @@
                     </p>
                 </template>
         </section>
-        <img id="logo-about" src="./assets/Logo-MDHL.png" />
+
     </main>
 
     <footer>
