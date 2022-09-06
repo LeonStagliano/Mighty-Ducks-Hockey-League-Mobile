@@ -97,7 +97,7 @@ createApp({
                     month: `SEPTEMBER`,
                     day: `15`,
                     time: `9:30 am`,
-                    location: `North`,
+                    location: `North Elementary`,
                     map: `<iframe class="map"
                     src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2949.251561024739!2d-87.84222038430782!3d42.33715974453967!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x880fed26d3692cf5%3A0x8611023901d6c74a!2sEvelyn%20Alexander%20School%20(K-3)!5e0!3m2!1ses!2sar!4v1654556832772!5m2!1ses!2sar"
                     width="" height="" style="border:0; width:100vw; height: 150px" allowfullscreen="" loading="lazy"
@@ -133,7 +133,7 @@ createApp({
                     month: `SEPTEMBER`,
                     day: `22`,
                     time: `9:30 am`,
-                    location: `South`,
+                    location: `South Elementary`,
                     map: `<iframe class="map"
                     src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3508.40031866839!2d-87.85686271819382!3d42.31690609652749!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x880feccac2135a21%3A0x8ce88e90b96bbec1!2sSouth%20Elementary%20School%20(K-5)!5e0!3m2!1ses!2sar!4v1654556733181!5m2!1ses!2sar"
                     width="" height="" style="border:0; width:100vw; height: 150px" allowfullscreen="" loading="lazy"
@@ -205,7 +205,7 @@ createApp({
                     month: `OCTOBER`,
                     day: `06`,
                     time: `1:00 pm`,
-                    location: `South`,
+                    location: `South Elementary`,
                     map: `<iframe class="map"
                     src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3508.40031866839!2d-87.85686271819382!3d42.31690609652749!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x880feccac2135a21%3A0x8ce88e90b96bbec1!2sSouth%20Elementary%20School%20(K-5)!5e0!3m2!1ses!2sar!4v1654556733181!5m2!1ses!2sar"
                     width="" height="" style="border:0; width:100vw; height: 150px" allowfullscreen="" loading="lazy"
@@ -259,7 +259,7 @@ createApp({
                     month: `OCTOBER`,
                     day: `20`,
                     time: `9:30 am`,
-                    location: `North`,
+                    location: `North Elementary`,
                     map: `<iframe class="map"
                     src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2949.251561024739!2d-87.84222038430782!3d42.33715974453967!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x880fed26d3692cf5%3A0x8611023901d6c74a!2sEvelyn%20Alexander%20School%20(K-3)!5e0!3m2!1ses!2sar!4v1654556832772!5m2!1ses!2sar"
                     width="" height="" style="border:0; width:100vw; height: 150px" allowfullscreen="" loading="lazy"
@@ -420,6 +420,7 @@ createApp({
                 "https://cdn2.sportngin.com/attachments/photo/807f-140080759/tgmITEb_large.jpg",
                 "https://www.lakeplacid.com/f/styles/standard_header/public/page/34697/whitface-ski-infographicpage001.jpg?itok=4_0FQEFw"
             ],
+            schools: [],
             accordionItem1Expanded: false,
             accordionItem2Expanded: false,
             accordionItem3Expanded: false,
@@ -452,6 +453,7 @@ createApp({
             this.catchGameTapped()
         }
 
+        this.catchSchools()
     },
     methods: {
         expandAccordion: function (accordionElement) {
@@ -520,6 +522,13 @@ createApp({
             let gameID = urlSearch.slice(4)
 
             this.gameDetails = this.games.filter(game => game.id === gameID)
+        },
+        catchSchools: function () {
+            this.games.forEach(game => {
+                if(!this.schools.includes(game.location)){
+                    this.schools.push(game.location)
+                }
+            })
         }
 
     },
