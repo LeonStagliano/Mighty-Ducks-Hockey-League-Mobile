@@ -441,7 +441,8 @@ createApp({
             selectedTeam: "All",
             showFinisheds: false,
             horaActual: new Date(),
-            gameDetails: ``
+            gameDetails: ``,
+            showAlert: false
         }
     },
     created() {

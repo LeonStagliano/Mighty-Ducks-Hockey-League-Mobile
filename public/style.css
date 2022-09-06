@@ -126,7 +126,7 @@ body {
 }
 
 
-.main-title-container {
+.main-title-container, .login-card {
     margin: 10px 0px 34px 0px;
     width: 100vw;
     padding: 7px 0px;
@@ -266,7 +266,7 @@ body {
     transform: rotate(45deg) translateX(5.5px);
 }
 
-#logo-about {
+#logo-about, .logo {
     width: 60vw;
     align-self: center;
     margin-bottom: 3vh;
@@ -519,6 +519,7 @@ body {
     margin-left: 6px;
     font-size: 12px;
     font-weight: bold;
+    font-style: italic;
     display: flex;
     justify-content: space-between;
 }
@@ -540,7 +541,7 @@ body {
 }
 
 .radio-label{
-    width: 27.7%;
+    width: 27.8%;
 }
 
 .permission-text{
@@ -560,4 +561,74 @@ body {
     border: 1px solid rgba(14, 88, 52, 0.64);
     background: -webkit-linear-gradient( rgba(32, 184, 111, 0.64) 9%,rgba(14, 88, 52, 0.64) 100%);
     box-shadow: 6px 6px 3px rgba(0, 0, 0, 0.219);
+    text-align: center;
+}
+
+.card{
+    margin: 3px 0px;
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    background-color: rgba(32, 184, 111, 0.64);
+    box-shadow: 0px 3px 3px rgba(0, 0, 0, 0.219);
+    text-align: center;
+    padding: 10px 0px;
+}
+
+.standard-text{
+    font-size: 14px;
+    margin: 6px 0px;
+}
+
+.email{
+    color:yellow;
+    font-weight: bold;
+    font-style: italic;
+    text-shadow: 2px 2px 4px black;
+}
+
+.avatar{
+    margin-top: 20px;
+}
+
+.link{
+    color: white;
+}
+
+.login-card{
+    min-height: 70vh;
+}
+
+.hero-html{
+    max-width: 100vw;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.hero-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    text-decoration: none;
+}
+
+.hero-text-container{
+    max-width: 100%;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+}
+
+.hero-text{
+    font-weight: bold;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size: 36px;
+    color: #39b394;
+    text-shadow: 5px 8px 3px black;
 }

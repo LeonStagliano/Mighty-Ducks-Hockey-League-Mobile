@@ -35,8 +35,8 @@
                     <a class="modal-link" href="./galery.html">Galery</a>
                     <a class="modal-link" href="./rules&policies.html">Rules & Policies</a>
                     <a class="modal-link active" href="#">Registration Form</a>
-                    <a class="modal-link" href="">Profile</a>
-                    <a class="modal-link" href="">Contact Us</a>
+                    <a class="modal-link" href="./profile.html">Profile</a>
+                    <a class="modal-link" href="./contact.html">Contact Us</a>
                 </div>
             </div>
         </template>
@@ -46,42 +46,42 @@
         </div> -->
 
         <section>
-            <form class="form">
+            <form class="form" action="#">
                 <fieldset class="input-container">
                     <legend class="input-label">Player's First Name</legend>
-                    <input class="input-clean" type="text">
+                    <input required class="input-clean" type="text">
                 </fieldset>
                 <fieldset class="input-container">
                     <legend class="input-label">Last Name</legend>
-                    <input class="input-clean" type="text">
+                    <input required class="input-clean" type="text">
                 </fieldset>
                 <fieldset class="input-container">
                     <legend class="input-label">Street Address</legend>
-                    <input class="input-clean" type="text">
+                    <input required class="input-clean" type="text">
                 </fieldset>
                 <fieldset class="input-container">
                     <legend class="input-label">City</legend>
-                    <input class="input-clean" type="text">
+                    <input required class="input-clean" type="text">
                 </fieldset>
                 <fieldset class="input-container">
                     <legend class="input-label">Zip Code</legend>
-                    <input class="input-clean" type="text">
+                    <input required class="input-clean" type="text">
                 </fieldset>
                 <fieldset class="input-container">
                     <legend class="input-label">Birth Date</legend>
-                    <input class="input-clean" type="date">
+                    <input required class="input-clean" type="date">
                 </fieldset>
                 <fieldset class="input-container">
                     <legend class="input-label">Parent/Guardian Name</legend>
-                    <input class="input-clean" type="text">
+                    <input required class="input-clean" type="text">
                 </fieldset>
                 <fieldset class="input-container">
                     <legend class="input-label">Contact Phone</legend>
-                    <input class="input-clean" type="number">
+                    <input required class="input-clean" type="number">
                 </fieldset>
                 <fieldset class="input-container">
                     <legend class="input-label">Contact Email</legend>
-                    <input class="input-clean" type="email">
+                    <input required class="input-clean" type="email">
                 </fieldset>
 
                 <fieldset class="radio-checkbox-container">
@@ -125,13 +125,13 @@
                 </fieldset>
                 <fieldset class="form-select-container">
                     <legend class="input-label">Which elementary schools do you live near?</legend>
-                    <select class="form-select input-clean">
+                    <select required class="form-select input-clean">
                         <option selected hidden value="">First Closest School</option>
                         <template v-for="school in schools">
                             <option class="input-label" :value="school">{{school}}</option>
                         </template>
                     </select>
-                    <select class="form-select input-clean">
+                    <select required class="form-select input-clean">
                         <option selected hidden value="">Second Closest School</option>
                         <template v-for="school in schools">
                             <option class="input-label" :value="school">{{school}}</option>
@@ -142,18 +142,18 @@
                     <legend class="input-label">What position(s) do you normally play? (check all that apply)</legend>
                     <div class="row-radios">
                         <label class="input-label">Goalkeeper
-                            <input required type="checkbox" name="position-normal" value="Goalkeeper">
+                            <input type="checkbox" name="position-normal" value="Goalkeeper">
                         </label>
                         <label class="input-label">Defense
-                            <input required type="checkbox" name="position-normal" value="Defense">
+                            <input type="checkbox" name="position-normal" value="Defense">
                         </label>
                     </div>
                     <div class="row-radios">
                         <label class="input-label">Midfield
-                            <input required type="checkbox" name="position-normal" value="Midfield">
+                            <input type="checkbox" name="position-normal" value="Midfield">
                         </label>
                         <label class="input-label">Forward
-                            <input required type="checkbox" name="position-normal" value="Forward">
+                            <input type="checkbox" name="position-normal" value="Forward">
                         </label>
                     </div>
                 </fieldset>
@@ -161,24 +161,24 @@
                     <legend class="input-label">What position(s) do you want to play? (check all that apply)</legend>
                     <div class="row-radios">
                         <label class="input-label">Goalkeeper
-                            <input required type="checkbox" name="position-want" value="Goalkeeper">
+                            <input type="checkbox" name="position-want" value="Goalkeeper">
                         </label>
                         <label class="input-label">Defense
-                            <input required type="checkbox" name="position-want" value="Defense">
+                            <input type="checkbox" name="position-want" value="Defense">
                         </label>
                     </div>
                     <div class="row-radios">
                         <label class="input-label">Midfield
-                            <input required type="checkbox" name="position-want" value="Midfield">
+                            <input type="checkbox" name="position-want" value="Midfield">
                         </label>
                         <label class="input-label">Forward
-                            <input required type="checkbox" name="position-want" value="Forward">
+                            <input type="checkbox" name="position-want" value="Forward">
                         </label>
                     </div>
                 </fieldset>
 
                 <label class="input-label">Already Have a Uniform
-                    <input required type="checkbox" name="have-uniform" value="Yes">
+                    <input type="checkbox" name="have-uniform" value="Yes">
                 </label>
 
                 <fieldset class="radio-checkbox-container">
@@ -273,16 +273,28 @@
 
                 <fieldset class="input-container">
                     <legend class="input-label">Parent/Guardian Signature</legend>
-                    <input class="input-clean" type="text">
+                    <input required class="input-clean" type="text">
                 </fieldset>
                 <fieldset class="input-container">
                     <legend class="input-label">Date</legend>
-                    <input class="input-clean" type="date">
+                    <input required class="input-clean" type="date">
                 </fieldset>
 
-                <input class="btn" type="submit" value="SEND">
+                <input @click="" class="btn" type="submit" value="SEND">
             </form>
         </section>
+
+        <template v-if="showAlert === true">
+            <div @click="showAlert = false" class="modal-background">
+                <div class="modal-content">
+                    <h3>Cool!</h3>
+                    <p class="">We have received your data</p>
+                    <p class="">Wait to be contacted by our staff</p>
+                    <h4>MIGHTY DOGS HOCKEY LEAGUE</h4>
+                </div>
+            </div>
+        </template>
+
     </main>
 
     <footer>
