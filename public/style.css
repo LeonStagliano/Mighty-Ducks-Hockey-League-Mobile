@@ -298,8 +298,8 @@ body {
 }
 
 .modal-content {
-    width: 90vw;
-    height: 36vh;
+    width: 300px;
+    min-height: 36vh;
     bottom: 12vh;
     border-radius: 1rem;
     background-color: #C2C2C2;
