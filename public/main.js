@@ -465,7 +465,8 @@ createApp({
             gameDetails: ``,
             showAlert: false,
             pageTheme: ``,
-            theme: ``
+            theme: ``,
+            newComment: ``
         }
     },
     created() {
@@ -481,10 +482,10 @@ createApp({
 
         if (JSON.parse(localStorage.getItem(`themeSelected`))) {
             this.pageTheme = JSON.parse(localStorage.getItem(`themeSelected`))
-            if(this.pageTheme === `./styleDark.css`){
+            if (this.pageTheme === `./styleDark.css`) {
                 this.theme = true
             }
-            
+
         }
 
     },
@@ -562,6 +563,22 @@ createApp({
                     this.schools.push(game.location)
                 }
             })
+        },
+        sendComment: function () {
+            this.games.forEach(game => {
+                if(!Array.isArray(game.comments)){
+                    game.comments = []
+                }
+                if (game.id === this.gameDetails.id) {
+                    game.comments.push({
+                        autor: `León`,
+                        date: `${new Date().toLocaleTimeString()} - ${new Date().toLocaleDateString()}`,
+                        comment: this.newComment
+                    })
+                    this.gameDetails.comments = game.comments
+                }
+            })
+            this.newComment = ``
         }
 
     },
